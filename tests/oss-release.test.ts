@@ -32,7 +32,7 @@ test("public package metadata locks the free OSS release boundary", () => {
     }
   });
   expect(packageJson.private).toBeUndefined();
-  expect(packageJson.files).toEqual(expect.arrayContaining(["src", "docs", "README.md", "LICENSE", "NOTICE"]));
+  expect(packageJson.files).toEqual(expect.arrayContaining(["src", "docs", "README.md", "LICENSE", "NOTICE", "bun.lock"]));
   expect(existsSync(join(process.cwd(), "LICENSE"))).toBe(true);
   expect(existsSync(join(process.cwd(), "NOTICE"))).toBe(true);
 });
@@ -47,6 +47,7 @@ test("packed tarball installs cleanly with zero provider keys and no private pat
   expect(files).toContain("package/LICENSE");
   expect(files).toContain("package/NOTICE");
   expect(files).toContain("package/README.md");
+  expect(files).toContain("package/bun.lock");
   expect(files).toContain("package/docs/adr/0001-ai-sdk-swarm-boundary.md");
   expect(files).toContain("package/docs/operator-runbook.md");
   expect(files).toContain("package/src/bin/matematica.ts");
@@ -200,12 +201,15 @@ test("free OSS zero-network acceptance smoke covers solve watch report replay an
     const replay = run("bun", ["run", "matematica", "goal", "replay", payload.runId, "--offline", "--verify-final"], installDir, env);
     expect(replay.status).toBe(0);
     expect(replay.stdout).not.toContain(canary);
-    expect(JSON.parse(replay.stdout)).toMatchObject({
+    const replayPayload = JSON.parse(replay.stdout);
+    expect(replayPayload).toMatchObject({
       ok: true,
       finalVerification: {
         ok: true
       }
     });
+    expect(replayPayload.manifest.cliVersion).toBe(packageVersion());
+    expect(replayPayload.manifest.packageLockHash).toMatch(/^[a-f0-9]{64}$/);
 
     const resume = run("bun", ["run", "matematica", "goal", "resume", payload.runId, "--offline"], installDir, env);
     expect(resume.status).toBe(payload.status === "goal_met" ? 0 : 2);
@@ -255,11 +259,17 @@ test("free OSS zero-network acceptance smoke covers solve watch report replay an
 
 function packPackage(): { packDir: string; tarball: string } {
   const packDir = tempDir("matematica-pack-");
-  const tarball = join(packDir, "hasna-matematica-0.0.1.tgz");
+  const tarball = join(packDir, `hasna-matematica-${packageVersion()}.tgz`);
   const pack = run("bun", ["pm", "pack", "--destination", packDir, "--quiet"], process.cwd());
   expect(pack.status).toBe(0);
   expect(existsSync(tarball)).toBe(true);
   return { packDir, tarball };
+}
+
+function packageVersion(): string {
+  const packageJson = JSON.parse(readFileSync(join(process.cwd(), "package.json"), "utf8")) as { version?: unknown };
+  if (typeof packageJson.version !== "string") throw new Error("package.json version is missing.");
+  return packageJson.version;
 }
 
 function installPackedPackage(tarball: string, prefix: string): { installDir: string; env: NodeJS.ProcessEnv } {

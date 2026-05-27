@@ -85,7 +85,7 @@ export type ReleaseDoctorReport = {
 
 export type ReleaseDoctorLedgerMode = "current-home" | "clean-home";
 
-const REQUIRED_PACKAGE_FILES = ["src", "docs", "README.md", "LICENSE", "NOTICE", "tsconfig.json"];
+const REQUIRED_PACKAGE_FILES = ["src", "docs", "README.md", "LICENSE", "NOTICE", "tsconfig.json", "bun.lock"];
 const REMOTE_PROVIDER_NAMES = new Set(["openai", "anthropic", "openrouter", "cerebras"]);
 
 function enterReleaseDoctorLedgerScope(mode: ReleaseDoctorLedgerMode): { cleanup: () => void } {

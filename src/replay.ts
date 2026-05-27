@@ -23,6 +23,7 @@ import { evaluateProofObligationGraph, traceProofObligations, type ProofObligati
 import { buildArxivSearchUrl } from "./research/arxiv";
 import { defaultMathlibTheoremIndexSnapshot } from "./theorem";
 import { computeLedgerEventHash, Ledger, type ExternalOperation, type StoredScore } from "./ledger";
+import { matematicaPackageLockHash, matematicaPackageVersion } from "./package-info";
 import { reportGenerationIdempotencyKey, renderReport } from "./report";
 import { redactJson, redactText } from "./redaction";
 import { buildReplayTrustContract, type ReplayTrustContract } from "./replay-trust";
@@ -507,9 +508,9 @@ export function buildReplayManifest(input: {
   const currentPolicy = input.currentPolicyManifest ?? buildVerifierPolicyManifest();
   return {
     runId: input.runId,
-    cliVersion: packageVersion(input.cwd),
+    cliVersion: matematicaPackageVersion(input.cwd),
     bunVersion: Bun.version,
-    packageLockHash: packageLockHash(input.cwd),
+    packageLockHash: matematicaPackageLockHash(input.cwd),
     config: publicConfig(input.config),
     schemaVersion: input.ledger.schemaVersion(),
     migrations: input.ledger.appliedMigrations(),
@@ -1875,13 +1876,6 @@ function terminalOutcomeEvents(events: LedgerEvent[]): LedgerEvent[] {
   return events.filter((event) => event.type === "goal.completed" || event.type === "goal.failed");
 }
 
-function packageVersion(cwd: string): string {
-  const packageJsonPath = join(cwd, "package.json");
-  if (!existsSync(packageJsonPath)) return "unknown";
-  const parsed = JSON.parse(readFileSync(packageJsonPath, "utf8")) as { version?: unknown };
-  return typeof parsed.version === "string" ? parsed.version : "unknown";
-}
-
 function compareField(
   divergences: ReplayDivergence[],
   kind: ReplayDivergence["kind"],
@@ -2911,16 +2905,6 @@ function portableArtifactProvenance(input: {
       mediaType: input.mediaType
     }
   };
-}
-
-function packageLockHash(cwd: string): string | undefined {
-  for (const filename of ["bun.lock", "bun.lockb"]) {
-    const path = join(cwd, filename);
-    if (existsSync(path)) {
-      return createHash("sha256").update(readFileSync(path)).digest("hex");
-    }
-  }
-  return undefined;
 }
 
 function artifactHash(

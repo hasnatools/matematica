@@ -1,5 +1,6 @@
 import { createHash } from "node:crypto";
 import { abortableSleep, abortableWait, throwIfAborted } from "../cancellation";
+import { matematicaPackageVersion } from "../package-info";
 
 export type ArxivPaper = {
   id: string;
@@ -34,7 +35,6 @@ export type ArxivSearchOptions = {
 const ARXIV_API = "https://export.arxiv.org/api/query";
 export const ARXIV_POLITE_MIN_INTERVAL_MS = 3_000;
 export const ARXIV_MAX_RESPONSE_BYTES = 2 * 1024 * 1024;
-const DEFAULT_USER_AGENT = "matematica-cli/0.0.1";
 let arxivQueue: Promise<void> = Promise.resolve();
 let lastArxivRequestAt = 0;
 
@@ -97,7 +97,8 @@ export async function searchArxiv(query: string, options: ArxivSearchOptions = {
 }
 
 export function arxivUserAgent(contact = process.env.MATEMATICA_ARXIV_CONTACT): string {
-  return contact ? `${DEFAULT_USER_AGENT} (${contact})` : DEFAULT_USER_AGENT;
+  const defaultUserAgent = `matematica-cli/${matematicaPackageVersion()}`;
+  return contact ? `${defaultUserAgent} (${contact})` : defaultUserAgent;
 }
 
 export function arxivCompliancePolicy(options: { contact?: string; minIntervalMs?: number } = {}) {

@@ -13,6 +13,12 @@ import { buildArxivCachePolicy, readArxivCache, writeArxivCache } from "../src/r
 
 const homes: string[] = [];
 
+function currentPackageVersion(): string {
+  const parsed = JSON.parse(readFileSync(join(process.cwd(), "package.json"), "utf8")) as { version?: unknown };
+  if (typeof parsed.version !== "string") throw new Error("package.json version is missing.");
+  return parsed.version;
+}
+
 function tempHome(): string {
   const home = mkdtempSync(join(tmpdir(), "matematica-test-"));
   homes.push(home);
@@ -398,6 +404,30 @@ test("solve creates runs from prompt and budget and returns follow-up commands",
   expect(report).toContain("Output trust label: computation only");
   expect(report).toContain("Replay command: matematica goal replay");
   expect(report).toContain("Next action: Replay the run; request a formal proof if the intended claim is a theorem.");
+});
+
+test("replay manifest reports package version outside the repository cwd", async () => {
+  tempHome();
+  const externalCwd = mkdtempSync(join(tmpdir(), "matematica-external-cwd-"));
+  homes.push(externalCwd);
+  process.env.MATEMATICA_LOCAL_ONLY = "true";
+
+  const solved = JSON.parse(await runCli([
+    "solve",
+    "--problem",
+    "Prove 1 + 1 = 2",
+    "--goal",
+    "Find verified computation",
+    "--budget-usd",
+    "0",
+    "--max-attempts",
+    "4",
+    "--workers",
+    "1"
+  ], externalCwd));
+
+  const manifest = JSON.parse(await runCli(["goal", "replay", solved.runId, "--manifest"], externalCwd));
+  expect(manifest.cliVersion).toBe(currentPackageVersion());
 });
 
 test("solve exits distinctly for honest budget exhaustion", async () => {
@@ -2761,7 +2791,7 @@ test("goal replay manifest and offline replay use persisted artifacts only", asy
   });
 
   const manifest = JSON.parse(await runCli(["goal", "replay", created.id, "--manifest"]));
-  expect(manifest.cliVersion).toBe("0.0.1");
+  expect(manifest.cliVersion).toBe(currentPackageVersion());
   expect(manifest.bunVersion).toBeString();
   expect(manifest.packageLockHash).toMatch(/^[a-f0-9]{64}$/);
   expect(manifest.config.providers.some((provider: { redactedApiKey?: string }) => provider.redactedApiKey === "<redacted>")).toBe(true);

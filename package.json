@@ -1,6 +1,6 @@
 {
   "name": "@hasna/matematica",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Goal-run CLI for persistent mathematical problem solving workflows.",
   "type": "module",
   "bin": {
@@ -18,7 +18,8 @@
     "README.md",
     "LICENSE",
     "NOTICE",
-    "tsconfig.json"
+    "tsconfig.json",
+    "bun.lock"
   ],
   "repository": {
     "type": "git",

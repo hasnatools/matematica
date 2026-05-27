@@ -1,4 +1,6 @@
 import { afterEach, expect, test } from "bun:test";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import {
   ARXIV_MAX_RESPONSE_BYTES,
   arxivCompliancePolicy,
@@ -27,6 +29,13 @@ const sampleFeed = `<?xml version="1.0" encoding="UTF-8"?>
     <link title="pdf" href="http://arxiv.org/pdf/2401.00001v1" rel="related" type="application/pdf"/>
   </entry>
 </feed>`;
+
+function expectedUserAgent(contact?: string): string {
+  const packageJson = JSON.parse(readFileSync(join(process.cwd(), "package.json"), "utf8")) as { version?: unknown };
+  if (typeof packageJson.version !== "string") throw new Error("package.json version is missing.");
+  const base = `matematica-cli/${packageJson.version}`;
+  return contact ? `${base} (${contact})` : base;
+}
 
 afterEach(() => {
   resetArxivPoliteState();
@@ -64,7 +73,7 @@ test("searchArxiv uses injectable fetcher", async () => {
   });
 
   expect(papers[0].id).toBe("http://arxiv.org/abs/2401.00001v1");
-  expect(userAgent).toBe("matematica-cli/0.0.1");
+  expect(userAgent).toBe(expectedUserAgent());
 });
 
 test("searchArxiv propagates AbortSignal into live fetches", async () => {
@@ -117,12 +126,12 @@ test("parseArxivFeed handles namespaced Atom tags without regex feed matching", 
 
 test("arxiv compliance policy includes user agent contact rate limit and redistribution boundaries", () => {
   process.env.MATEMATICA_ARXIV_CONTACT = "ops@example.test";
-  expect(arxivUserAgent()).toBe("matematica-cli/0.0.1 (ops@example.test)");
+  expect(arxivUserAgent()).toBe(expectedUserAgent("ops@example.test"));
   expect(arxivCompliancePolicy()).toMatchObject({
     termsUrl: "https://info.arxiv.org/help/api/tou.html",
     maxConnections: 1,
     minIntervalMs: 3000,
-    userAgent: "matematica-cli/0.0.1 (ops@example.test)",
+    userAgent: expectedUserAgent("ops@example.test"),
     metadataRedistribution: "allowed",
     pdfAndSourceRedistribution: "not_exported_without_license"
   });
