@@ -1,0 +1,6 @@
+.matematica/
+.matematica-*/
+node_modules/
+dist/
+coverage/
+*.log

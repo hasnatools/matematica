@@ -1,0 +1,4400 @@
+{
+  "format": "matematica.release-evidence-freshness",
+  "version": 1,
+  "planId": "62077a6e-5b78-4849-b43a-f3b6bf5a67bd",
+  "generatedAt": "2026-05-26T20:03:12+03:00",
+  "completedTaskEvidence": [
+    {
+      "taskId": "a9aa79bf",
+      "evidenceId": "todos-comment:a9aa79bf:instrumented-ai-outbox",
+      "verifiedAt": "2026-05-26T03:35:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ai-sdk-compat.test.ts tests/cli.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "ai-sdk-provider-boundary-static-audit",
+        "saved-everything-release-coverage",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "33bdd555",
+      "evidenceId": "todos-comment:33bdd555:hostile-provider-accounting-fraud-suite",
+      "verifiedAt": "2026-05-26T04:30:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/providers.test.ts tests/adversarial-failure-modes.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "provider-model-pricing",
+        "hostile-live-provider-dry-run",
+        "unreconciled-external-outcomes",
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "a401f68d",
+      "evidenceId": "todos-comment:a401f68d:expanded-resource-budget-contract",
+      "verifiedAt": "2026-05-26T06:20:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ledger.test.ts tests/scheduler.test.ts tests/cli.test.ts tests/providers.test.ts tests/replay-persistence.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "unreconciled-external-outcomes",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/budget.ts",
+          "sha256": "808677b50be2e3848aad648e0d9f85b4dd7ea00a3471f3ac0b5ab98c61ec178a"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/scheduler.ts",
+          "sha256": "bc1f21b2b0e81e4cafc53e48dd08d61cfca5739c03c6de58b9a606e39815f314"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/oss-safety.ts",
+          "sha256": "50c428a1669d6d0fd3e368bbd97401fc7f4bb0d6ad320aac651f8362922f663c"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/scheduler.test.ts",
+          "sha256": "9e63bc403951bd44e30fba18fc6363a86b01ef130ab19a2af4bf7e0715442ddc"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "c7b2a697",
+      "evidenceId": "todos-comment:c7b2a697:machine-provider-admission-ledger",
+      "verifiedAt": "2026-05-26T12:00:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/providers.test.ts tests/ledger.test.ts tests/replay-persistence.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "provider-model-pricing",
+        "provider-legal-privacy",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/budget.ts",
+          "sha256": "808677b50be2e3848aad648e0d9f85b4dd7ea00a3471f3ac0b5ab98c61ec178a"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/swarm-admission.ts",
+          "sha256": "2721677a023cf0d174c8f9acf841ce58de1c35f61a6f0e308ec708a7a794f512"
+        },
+        {
+          "path": "src/swarm-capacity.ts",
+          "sha256": "3a79ba176bab76a96ac4f08127f80dcb76fdc0b01a635d93398ac5c5799531a8"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/external-reconciliation.ts",
+          "sha256": "39350a9bf56398cbb16b974887a6d8829153db138b8057efadb946f05c8b0eb8"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/budget-chaos.test.ts",
+          "sha256": "405aa7aa33cacf134ef6e99bbe51925c87c0bce3904ce84ec340285cbc642473"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "d986cab3",
+      "evidenceId": "mementos:canonical-release-plan:29c1ae8e",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "research-legal-privacy-citations"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "a2fb51b7",
+      "evidenceId": "todos-comment:a2fb51b7:clean-cli-hidden-hostile-replays",
+      "verifiedAt": "2026-05-26T05:25:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/benchmarks.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-false-solved-evals",
+        "public-claim-language-guardrail"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "9b7f1963",
+      "evidenceId": "release-gate:zero-false-solved-evals",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/benchmarks.test.ts tests/release-doctor.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "7eb5850f",
+      "evidenceId": "release-gate:public-claim-language-guardrail",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/public-language.test.ts tests/release-doctor.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "public-claim-language-guardrail"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "c6a03f04",
+      "evidenceId": "release-gate:public-claims-release-matrix",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/release-doctor.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "public-claims-release-matrix"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "21a0604c",
+      "evidenceId": "mementos:canonical-release-plan:29c1ae8e",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/release-doctor.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "public-claims-surface-audit",
+        "public-claims-release-matrix"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "9a35cdba",
+      "evidenceId": "todos-comment:9a35cdba:packed-oss-install-acceptance-gate",
+      "verifiedAt": "2026-05-26T04:55:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/oss-release.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "package-metadata",
+        "package-files",
+        "zero-network",
+        "public-claims-surface-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "031a8206",
+      "evidenceId": "release-gate:proof-certificate-clean-home-replay",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/proof-certificate.test.ts tests/replay-persistence.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "42d5b68c",
+      "evidenceId": "release-gate:unreconciled-external-outcomes",
+      "verifiedAt": "2026-05-25T22:00:00+03:00",
+      "verificationCommands": [
+        "bun test tests/release-doctor.test.ts tests/ledger.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "a219e0dc",
+      "evidenceId": "todos-comment:a219e0dc:canonical-plan-gate",
+      "verifiedAt": "2026-05-25T22:45:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/milestones.test.ts tests/release-doctor.test.ts tests/cli.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "canonical-release-plan"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "9d269c14",
+      "evidenceId": "todos-comment:9d269c14:canonical-release-critical-path",
+      "verifiedAt": "2026-05-26T02:47:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/milestones.test.ts tests/release-doctor.test.ts tests/cli.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "shared-implementation-plan-registry",
+        "canonical-release-plan",
+        "milestone-gates"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "a3b795e3",
+      "evidenceId": "mementos:shared-implementation-plan-registry:a0277158",
+      "verifiedAt": "2026-05-25T22:58:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/milestones.test.ts tests/release-doctor.test.ts tests/cli.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "shared-implementation-plan-registry",
+        "canonical-release-plan",
+        "milestone-gates"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "451a787f",
+      "evidenceId": "todos-comment:451a787f:saved-everything-release-coverage",
+      "verifiedAt": "2026-05-26T02:38:57+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/audit.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "saved-everything-release-coverage",
+        "workflow-phase-release-audit",
+        "unreconciled-external-outcomes",
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "04362083",
+      "evidenceId": "release-gate:evidence-freshness-current-change",
+      "verifiedAt": "2026-05-26T01:05:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/milestones.test.ts tests/release-doctor.test.ts tests/cli.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "release-evidence-freshness",
+        "canonical-release-plan",
+        "public-claims-release-matrix"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "fc3b3129",
+      "evidenceId": "todos-comment:fc3b3129:provider-boundary-static-audit",
+      "verifiedAt": "2026-05-26T02:28:34+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ai-sdk-compat.test.ts tests/release-doctor.test.ts tests/milestones.test.ts tests/cli.test.ts tests/oss-release.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "ai-sdk-provider-boundary-static-audit",
+        "ai-sdk-compatibility",
+        "provider-legal-privacy",
+        "provider-model-pricing",
+        "hostile-live-provider-dry-run"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/provider-boundary-audit.ts",
+          "sha256": "55a3dcc721e304d919b91c9440df838a2c96bb064ea8e1569c0a0b9d31d48e49"
+        },
+        {
+          "path": "src/provider-resilience.ts",
+          "sha256": "804b6cbc4aab8f4edbee24bd1ecd0b34d97f8240fa9817b25a60e1f48699de48"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ai-sdk-compat.test.ts",
+          "sha256": "04a0b307b24e3e055b9b265d8129053846fe6efb5e24cb53a789be024ced563d"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "1baf48f5",
+      "evidenceId": "todos-comment:1baf48f5:multi-provider-cli-routing-contract",
+      "verifiedAt": "2026-05-26T04:02:31+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/cli.test.ts tests/providers.test.ts tests/replay-persistence.test.ts tests/swarm-fanout-planner.test.ts tests/milestones.test.ts tests/release-doctor.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "byok-boundary",
+        "provider-legal-privacy",
+        "provider-model-pricing",
+        "hostile-live-provider-dry-run"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/config.ts",
+          "sha256": "47940cdbdc67ba864d38ffffe27c9c5baa21f275b40dd7085ddbfa102cb3a01b"
+        },
+        {
+          "path": "src/providers.ts",
+          "sha256": "bb9b2213f794d55a6b5cf47f3a813636ed0afde2bb6db936629fd7785283a080"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/swarm-admission.ts",
+          "sha256": "2721677a023cf0d174c8f9acf841ce58de1c35f61a6f0e308ec708a7a794f512"
+        },
+        {
+          "path": "src/swarm-fanout-planner.ts",
+          "sha256": "fdb2b7ebf88d2a933e19226fba809fece59c53a3720c1447388c1d6add7e30d3"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/swarm-fanout-planner.test.ts",
+          "sha256": "3cd10d12b5760cc860f07ede95726d00972a559393ec77d554e4560c977b4f2e"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "3c5f744c",
+      "evidenceId": "todos-comment:3c5f744c:pflk-gree-measurable-progression-contract",
+      "verifiedAt": "2026-05-26T04:16:33+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/runner.test.ts tests/progress.test.ts tests/release-doctor.test.ts tests/audit.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "workflow-phase-release-audit",
+        "saved-everything-release-coverage",
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/workflow.ts",
+          "sha256": "7ef7f66212c27211b34af1534b25aad3496519c19b04a727b51fa80d9d4ab5e8"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/progress.ts",
+          "sha256": "5f7d6620c6ab7c8d0f9a5568a8a3b57378bd9899b65868192a38e6a453a987f7"
+        },
+        {
+          "path": "src/swarm-fanout-planner.ts",
+          "sha256": "fdb2b7ebf88d2a933e19226fba809fece59c53a3720c1447388c1d6add7e30d3"
+        },
+        {
+          "path": "src/knowledge-firewall.ts",
+          "sha256": "0305e160c89fc9f2e461b44ac8e6c5eb5d3bbb14c5a3b846364fa51ef5bdf5c3"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "tests/runner.test.ts",
+          "sha256": "3a7f52752acbfc8b1d79dbf905040fd7225780eaea738c693a239f41f1b13ed1"
+        },
+        {
+          "path": "tests/progress.test.ts",
+          "sha256": "3b5f655f098e16d6a23c66f2b4f2253a11ca4ac9e2a814ebb5d882071a19eda6"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/swarm-fanout-planner.test.ts",
+          "sha256": "3cd10d12b5760cc860f07ede95726d00972a559393ec77d554e4560c977b4f2e"
+        },
+        {
+          "path": "tests/public-language.test.ts",
+          "sha256": "b577840083dd958758e366ff20faf5bc1edeb4e5ffd48cb88c0358769ff2c848"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "ba7da35c",
+      "evidenceId": "todos-comment:ba7da35c:mathlib-theorem-retrieval-planning",
+      "verifiedAt": "2026-05-26T13:00:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/theorem.test.ts tests/runner.test.ts tests/replay-persistence.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "research-legal-privacy-citations",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/theorem.ts",
+          "sha256": "ea8135ff239d482e8b587be2dae371bed4bb825d5062bf54035f759358151202"
+        },
+        {
+          "path": "src/workflow.ts",
+          "sha256": "7ef7f66212c27211b34af1534b25aad3496519c19b04a727b51fa80d9d4ab5e8"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/offline-replay-gate.ts",
+          "sha256": "eba1b9df087a542a0b2877fa2652d6a14483ba7e689e417b8bc08a757af46de9"
+        },
+        {
+          "path": "src/prompt-boundary.ts",
+          "sha256": "d68edc638d618349202e5e72891977be7561941fe2ab48804ebbc8a1d623e2ea"
+        },
+        {
+          "path": "src/knowledge-firewall.ts",
+          "sha256": "0305e160c89fc9f2e461b44ac8e6c5eb5d3bbb14c5a3b846364fa51ef5bdf5c3"
+        },
+        {
+          "path": "src/lean.ts",
+          "sha256": "7b4e821fae361680344028fa2331c3c36cce16c9b973a1becfef85cb27c731f1"
+        },
+        {
+          "path": "src/research/security.ts",
+          "sha256": "2553651dbe55be12363cc1e4bff0f5542bad7080f5fbd9a9dec3b715c0957364"
+        },
+        {
+          "path": "tests/theorem.test.ts",
+          "sha256": "7a60f7768acdca1ff93ea0ae32b34d5de52a922e9ffeb25f6e4a033984980e2f"
+        },
+        {
+          "path": "tests/runner.test.ts",
+          "sha256": "3a7f52752acbfc8b1d79dbf905040fd7225780eaea738c693a239f41f1b13ed1"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/research-security.test.ts",
+          "sha256": "f10bd6e15040deca78841078a327de215408834ff5a99b4e2f96957db87e43d7"
+        },
+        {
+          "path": "tests/knowledge-firewall.test.ts",
+          "sha256": "4fa0a78385a210f78a04568bcaccc924c12df152b7c0e258cb6598f250b86116"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "b9a12f12",
+      "evidenceId": "todos-comment:b9a12f12:tiered-hard-math-benchmark-suite",
+      "verifiedAt": "2026-05-26T14:10:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/benchmarks.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-false-solved-evals",
+        "milestone-gates"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/problem-classifier.ts",
+          "sha256": "2e26ebd13eafce61ff20afae18b77f658912a76faead7195ff893b5f6db6ea36"
+        },
+        {
+          "path": "src/evidence.ts",
+          "sha256": "4a7a78b19b86a0fb8f5d743f1fa83ffeb8716b548a3bf7e7fcb4f474d20482b4"
+        },
+        {
+          "path": "src/goal-success.ts",
+          "sha256": "77726113aaa47b80c3ba94f96947d3fea421e53b1ea992aad4d6ac7a39165a29"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/problem-classifier.test.ts",
+          "sha256": "dbadfbcf2eb8c901d5da6048dbab5f4b33bd7a2b547c8c41f377894f618ff4ed"
+        },
+        {
+          "path": "tests/solver-fixtures.test.ts",
+          "sha256": "810f0d538b11b276c9085aa11d03bdd3c72065f3303fbbd7d85276ef14faed1d"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "c8e06dcb",
+      "evidenceId": "todos-comment:c8e06dcb:durable-run-state-machine",
+      "verifiedAt": "2026-05-26T15:00:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ledger.test.ts tests/runner.test.ts tests/cli.test.ts tests/replay-persistence.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "workflow-phase-release-audit",
+        "zero-false-solved-evals"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/resume.ts",
+          "sha256": "a1bfffab1bb763ccecbe20e8764897521dbca8bff80f54d3729cbc66897206c1"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/outcome.ts",
+          "sha256": "d0a2034bf173a96db79b205090361705054e093e7afd0018da140e7de1fd5960"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/workflow.ts",
+          "sha256": "7ef7f66212c27211b34af1534b25aad3496519c19b04a727b51fa80d9d4ab5e8"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/runner.test.ts",
+          "sha256": "3a7f52752acbfc8b1d79dbf905040fd7225780eaea738c693a239f41f1b13ed1"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/scheduler.test.ts",
+          "sha256": "9e63bc403951bd44e30fba18fc6363a86b01ef130ab19a2af4bf7e0715442ddc"
+        },
+        {
+          "path": "tests/reliability-integration.test.ts",
+          "sha256": "d3655d6e4c617704b55b0f370ae01fc82df0adc4a4029d956e73bb01918144a0"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "f020dba2",
+      "evidenceId": "todos-comment:f020dba2:worker-queue-leases-cancellation",
+      "verifiedAt": "2026-05-26T15:45:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/scheduler.test.ts tests/budget-chaos.test.ts tests/adversarial-failure-modes.test.ts tests/replay-persistence.test.ts tests/swarm-boundary.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "workflow-phase-release-audit",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/scheduler.ts",
+          "sha256": "bc1f21b2b0e81e4cafc53e48dd08d61cfca5739c03c6de58b9a606e39815f314"
+        },
+        {
+          "path": "src/resume.ts",
+          "sha256": "a1bfffab1bb763ccecbe20e8764897521dbca8bff80f54d3729cbc66897206c1"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/swarm-boundary.ts",
+          "sha256": "ed56f7a6fb338a9fe3013401988c1732a1e3bf87144f228c8e3569e870bc8ac5"
+        },
+        {
+          "path": "src/swarm-capacity.ts",
+          "sha256": "3a79ba176bab76a96ac4f08127f80dcb76fdc0b01a635d93398ac5c5799531a8"
+        },
+        {
+          "path": "src/swarm-kill-drill.ts",
+          "sha256": "54e4f3133a888b8bcc13263dae9b3ad813eb329979c5a97f0e25d440fdbbb391"
+        },
+        {
+          "path": "src/swarm-stress-gate.ts",
+          "sha256": "8eea89453196cb8f4908d3190903854ef1b644e1f9a9e07b892ebbedfb70520d"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/scheduler.test.ts",
+          "sha256": "9e63bc403951bd44e30fba18fc6363a86b01ef130ab19a2af4bf7e0715442ddc"
+        },
+        {
+          "path": "tests/budget-chaos.test.ts",
+          "sha256": "405aa7aa33cacf134ef6e99bbe51925c87c0bce3904ce84ec340285cbc642473"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/swarm-boundary.test.ts",
+          "sha256": "b899a4416f6617786f81bc5793be6cb3c877d9ae06aef1dd09bee3a17b64e9b9"
+        },
+        {
+          "path": "tests/swarm-kill-drill.test.ts",
+          "sha256": "6e8adbb901117dc97ae9d16919045c94798568eb68ddbfda3f84b70ae400b6bf"
+        },
+        {
+          "path": "tests/swarm-stress-gate.test.ts",
+          "sha256": "17c11d555c2982f28b85a1af2f7819963be655a6dcd8e9d951131e7bae16c223"
+        },
+        {
+          "path": "tests/reliability-integration.test.ts",
+          "sha256": "d3655d6e4c617704b55b0f370ae01fc82df0adc4a4029d956e73bb01918144a0"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "c3a22bd0",
+      "evidenceId": "todos-comment:c3a22bd0:budget-manager-stop-conditions",
+      "verifiedAt": "2026-05-26T16:20:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ledger.test.ts tests/scheduler.test.ts tests/providers.test.ts tests/budget-chaos.test.ts tests/runner.test.ts tests/cli.test.ts tests/replay-persistence.test.ts tests/adversarial-failure-modes.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-network",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/budget.ts",
+          "sha256": "808677b50be2e3848aad648e0d9f85b4dd7ea00a3471f3ac0b5ab98c61ec178a"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/scheduler.ts",
+          "sha256": "bc1f21b2b0e81e4cafc53e48dd08d61cfca5739c03c6de58b9a606e39815f314"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/resume.ts",
+          "sha256": "a1bfffab1bb763ccecbe20e8764897521dbca8bff80f54d3729cbc66897206c1"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/oss-safety.ts",
+          "sha256": "50c428a1669d6d0fd3e368bbd97401fc7f4bb0d6ad320aac651f8362922f663c"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/finalization.ts",
+          "sha256": "50fef265cab95b874d62d8916444ac0d37fa409694766db927a75649a5a4b2b9"
+        },
+        {
+          "path": "src/outcome.ts",
+          "sha256": "d0a2034bf173a96db79b205090361705054e093e7afd0018da140e7de1fd5960"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/scheduler.test.ts",
+          "sha256": "9e63bc403951bd44e30fba18fc6363a86b01ef130ab19a2af4bf7e0715442ddc"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/budget-chaos.test.ts",
+          "sha256": "405aa7aa33cacf134ef6e99bbe51925c87c0bce3904ce84ec340285cbc642473"
+        },
+        {
+          "path": "tests/runner.test.ts",
+          "sha256": "3a7f52752acbfc8b1d79dbf905040fd7225780eaea738c693a239f41f1b13ed1"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/adversarial-failure-modes.test.ts",
+          "sha256": "5119dcd60924f2336a9b4e8130b5721397adb90843a1547c3ba8d8b6bfaf553c"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "6daa2d93",
+      "evidenceId": "todos-comment:6daa2d93:controlled-parallel-execution",
+      "verifiedAt": "2026-05-26T17:00:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/swarm-fanout-planner.test.ts tests/swarm-capacity.test.ts tests/swarm-kill-drill.test.ts tests/swarm-stress-gate.test.ts tests/scheduler.test.ts tests/cli.test.ts tests/providers.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "workflow-phase-release-audit",
+        "milestone-gates"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/scheduler.ts",
+          "sha256": "bc1f21b2b0e81e4cafc53e48dd08d61cfca5739c03c6de58b9a606e39815f314"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/swarm-admission.ts",
+          "sha256": "2721677a023cf0d174c8f9acf841ce58de1c35f61a6f0e308ec708a7a794f512"
+        },
+        {
+          "path": "src/swarm-capacity.ts",
+          "sha256": "3a79ba176bab76a96ac4f08127f80dcb76fdc0b01a635d93398ac5c5799531a8"
+        },
+        {
+          "path": "src/swarm-fanout-planner.ts",
+          "sha256": "fdb2b7ebf88d2a933e19226fba809fece59c53a3720c1447388c1d6add7e30d3"
+        },
+        {
+          "path": "src/swarm-kill-drill.ts",
+          "sha256": "54e4f3133a888b8bcc13263dae9b3ad813eb329979c5a97f0e25d440fdbbb391"
+        },
+        {
+          "path": "src/swarm-stress-gate.ts",
+          "sha256": "8eea89453196cb8f4908d3190903854ef1b644e1f9a9e07b892ebbedfb70520d"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/swarm-fanout-planner.test.ts",
+          "sha256": "3cd10d12b5760cc860f07ede95726d00972a559393ec77d554e4560c977b4f2e"
+        },
+        {
+          "path": "tests/swarm-capacity.test.ts",
+          "sha256": "e1063ed8e6b82fa307f6014b5a6de4d7a1c8d1561ba996e0b21831353dc8d5b1"
+        },
+        {
+          "path": "tests/swarm-kill-drill.test.ts",
+          "sha256": "6e8adbb901117dc97ae9d16919045c94798568eb68ddbfda3f84b70ae400b6bf"
+        },
+        {
+          "path": "tests/swarm-stress-gate.test.ts",
+          "sha256": "17c11d555c2982f28b85a1af2f7819963be655a6dcd8e9d951131e7bae16c223"
+        },
+        {
+          "path": "tests/scheduler.test.ts",
+          "sha256": "9e63bc403951bd44e30fba18fc6363a86b01ef130ab19a2af4bf7e0715442ddc"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "4d8e86ef",
+      "evidenceId": "todos-comment:4d8e86ef:append-only-saved-everything-ledger",
+      "verifiedAt": "2026-05-26T06:12:15+03:00",
+      "verificationCommands": [
+        "bun test tests/replay-persistence.test.ts --timeout 120000 --test-name-pattern \"offline replay manifest covers\"",
+        "bun test tests/audit.test.ts tests/replay-persistence.test.ts tests/ledger.test.ts tests/providers.test.ts tests/ai-sdk-loop-replay.test.ts tests/secret-canary.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bunx tsc --noEmit",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "unreconciled-external-outcomes",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/adr/0001-ai-sdk-swarm-boundary.md",
+          "sha256": "b8b35e2214873295c8be593a512b99f33c74270b36fa7c493aa70d62b1bb1be3"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/artifacts.ts",
+          "sha256": "7939891e8f83afaf782abce34dd7ebf86c8b53a7dc11337d139d32d4a86e754a"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/scheduler.ts",
+          "sha256": "bc1f21b2b0e81e4cafc53e48dd08d61cfca5739c03c6de58b9a606e39815f314"
+        },
+        {
+          "path": "src/resume.ts",
+          "sha256": "a1bfffab1bb763ccecbe20e8764897521dbca8bff80f54d3729cbc66897206c1"
+        },
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/worker-tools.ts",
+          "sha256": "48ff8ac92a2553529b63ed32d87d88b002409d12fa5c0ad82369e0395512f6ae"
+        },
+        {
+          "path": "src/lean.ts",
+          "sha256": "7b4e821fae361680344028fa2331c3c36cce16c9b973a1becfef85cb27c731f1"
+        },
+        {
+          "path": "src/research/arxiv-cache.ts",
+          "sha256": "eda62961ab0b8c576882c98dd4f5aa52ecf534cf23b28419a74ec29bd4598d1a"
+        },
+        {
+          "path": "src/research/compliance.ts",
+          "sha256": "36ce8c762134fb893b15493625486c292cea25e9e43a00b273729f946c9caaa0"
+        },
+        {
+          "path": "src/research/citations.ts",
+          "sha256": "04f762f9151d12c02ec0099c9979aaf5d7bb0b20888c87e0c028ca1b15c105bf"
+        },
+        {
+          "path": "src/research/enrichment.ts",
+          "sha256": "93ff4c0e7d778b36ec58ae571a196176a6fff8f4159b8fff1f090dac0a33ca22"
+        },
+        {
+          "path": "src/swarm-coordinator.ts",
+          "sha256": "eae9d1aec7b84480006aba38bec2499b955831df00f3bc2235633b274597eae3"
+        },
+        {
+          "path": "src/swarm-fanout-planner.ts",
+          "sha256": "fdb2b7ebf88d2a933e19226fba809fece59c53a3720c1447388c1d6add7e30d3"
+        },
+        {
+          "path": "src/swarm-capacity.ts",
+          "sha256": "3a79ba176bab76a96ac4f08127f80dcb76fdc0b01a635d93398ac5c5799531a8"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/ai-sdk-loop-replay.test.ts",
+          "sha256": "e28a7f2dd45365653f1d66bf9ee921fc1fa14ff15b6bf10ed470cfd6a0226570"
+        },
+        {
+          "path": "tests/secret-canary.test.ts",
+          "sha256": "4e9b9ebdb2cbdfe518b26762aeedd7690cd76152594715fb0403c42b074b94d3"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "e89c566b",
+      "evidenceId": "todos-comment:e89c566b:release-workflow-command",
+      "verifiedAt": "2026-05-26T06:23:47+03:00",
+      "verificationCommands": [
+        "bun run src/bin/matematica.ts release check --dry-run --json",
+        "bunx tsc --noEmit",
+        "bun test tests/release-workflow.test.ts tests/cli.test.ts tests/oss-release.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "package-metadata",
+        "package-files",
+        "canonical-release-plan",
+        "public-claims-release-matrix"
+      ],
+      "sourceHashes": [
+        {
+          "path": "package.json",
+          "sha256": "453e3b8e0bfafcc2f2624ebf6e47f50c47fb0647690e1023580c6e26bf3d48cb"
+        },
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-workflow.ts",
+          "sha256": "d3e3e2a08b0fdbcef456fe7b189f65674bf59731855186ece40f585a80fc7945"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-evidence.ts",
+          "sha256": "cbb4d4ebf1e18fa7b3c12ff21c9c134aee6af9e8d11079eb7d66d51f6b9b59a6"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/lean.ts",
+          "sha256": "7b4e821fae361680344028fa2331c3c36cce16c9b973a1becfef85cb27c731f1"
+        },
+        {
+          "path": "src/swarm-stress-gate.ts",
+          "sha256": "8eea89453196cb8f4908d3190903854ef1b644e1f9a9e07b892ebbedfb70520d"
+        },
+        {
+          "path": "src/provider-dry-run.ts",
+          "sha256": "d47efe3c4ec84eb21f2a9819341231e5c715debf457de8e7f77c36aedb2f8999"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/public-language.ts",
+          "sha256": "e637c9dd9b369a85288197911dd14a6ccbbeb917e7480e75167da36a68ac2d28"
+        },
+        {
+          "path": "tests/release-workflow.test.ts",
+          "sha256": "c3e621b38f1d18f6684324cc2a0018a6978a22f63b8d7f21e722b6b50ae851ca"
+        },
+        {
+          "path": "tests/oss-release.test.ts",
+          "sha256": "d91995c3d0baae94843a1cadab486f23451f49d5bed79b59722c1e72875655b7"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/secret-canary.test.ts",
+          "sha256": "4e9b9ebdb2cbdfe518b26762aeedd7690cd76152594715fb0403c42b074b94d3"
+        },
+        {
+          "path": "tests/redaction.test.ts",
+          "sha256": "08205efec159a7c1dedffa09c207f2e42c292120e8e867aac81250a37d908707"
+        },
+        {
+          "path": "tests/storage-encryption.test.ts",
+          "sha256": "dbe183296169226c2d13917c44e1852d2158fa8e5d0e2ab50cd7b65a929311a4"
+        },
+        {
+          "path": "tests/lean.test.ts",
+          "sha256": "91f2f06ddffa2995df927abdce7ce3487753068a8bd8ae880f06ba125931ac85"
+        },
+        {
+          "path": "tests/verifier-conformance.test.ts",
+          "sha256": "6793bffcafa5a591e3a2f484a91e4eead9786230e65948cf681c1c8852ac5211"
+        },
+        {
+          "path": "tests/benchmarks.test.ts",
+          "sha256": "b8ae5ceabfca34e321f297d54108ea9491f2cf9496b8ce92735941e9123d1492"
+        },
+        {
+          "path": "tests/swarm-stress-gate.test.ts",
+          "sha256": "17c11d555c2982f28b85a1af2f7819963be655a6dcd8e9d951131e7bae16c223"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        }
+      ]
+    },
+    {
+      "taskId": "29bd3e36",
+      "evidenceId": "todos-comment:29bd3e36:live-todos-release-sync",
+      "verifiedAt": "2026-05-26T13:20:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/release-doctor.test.ts tests/milestones.test.ts",
+        "bun run matematica doctor --release --json",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "canonical-release-plan",
+        "shared-implementation-plan-registry"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/implementation-plan-registry.ts",
+          "sha256": "bf145a4da1bf399de7f07268821b96ed211e803e45fd84d2375d162cecffc4a0"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "fe8ff7dc",
+      "evidenceId": "todos-comment:fe8ff7dc:adversarial-quorum-risk-acceptance",
+      "verifiedAt": "2026-05-26T13:20:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/plan-change-review.test.ts tests/release-doctor.test.ts tests/milestones.test.ts",
+        "bun run matematica doctor --release --json",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "adversarial-plan-change-review",
+        "canonical-release-plan"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/plan-change-review.ts",
+          "sha256": "9453ce9beed60046ccd5d84f093aeda4d5166e9dd077c5d4ddbd8a80067a2772"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "docs/release/adversarial-plan-change-reviews.json",
+          "sha256": "8a749394d854bc27f47ba5bd2b5754bb63eca54e3404a6ccdb494facee265b05"
+        },
+        {
+          "path": "tests/plan-change-review.test.ts",
+          "sha256": "9a191aa5787a7e18a2cf0481fe3d358bdd80a9851888d96361991b542a450946"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "b685adb5",
+      "evidenceId": "todos-comment:b685adb5:live-todos-entropy-gate",
+      "verifiedAt": "2026-05-26T13:20:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts",
+        "bun run matematica doctor --release --json",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "canonical-release-plan",
+        "shared-implementation-plan-registry"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/release-todos.ts",
+          "sha256": "0bf3d3a7cc568900c09e774f9005acb6504eadfc963b360c2dc5450f161dee95"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "7202cb8f",
+      "evidenceId": "todos-comment:7202cb8f:replay-trust-labels",
+      "verifiedAt": "2026-05-26T13:25:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/cli.test.ts tests/replay-persistence.test.ts tests/release-doctor.test.ts tests/public-language.test.ts tests/milestones.test.ts",
+        "bun run matematica doctor --release --json",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "saved-everything-release-coverage",
+        "public-claims-surface-audit",
+        "public-claim-language-guardrail"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/replay-trust.ts",
+          "sha256": "ef1b9401bdbbfb871e8de3c2077200824eb075c282d7445dc982b6ff98144732"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/public-claims.ts",
+          "sha256": "b5a9ac406eb94508bc82e623b821a150b4ff4940f1c2aa8fe3a5fdd364039fb1"
+        },
+        {
+          "path": "src/index.ts",
+          "sha256": "b8a801f219d3895b193e3a4df3ec97e04e811fb9fde9a35bf64b9f262cdda98f"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/public-language.test.ts",
+          "sha256": "b577840083dd958758e366ff20faf5bc1edeb4e5ffd48cb88c0358769ff2c848"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "a89287a7",
+      "evidenceId": "todos-comment:a89287a7:lean-mathlib-tcb-replay-gate",
+      "verifiedAt": "2026-05-26T16:49:56+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/evidence.test.ts tests/lean.test.ts tests/verifier-conformance.test.ts tests/runner.test.ts tests/replay-persistence.test.ts tests/proof-certificate.test.ts tests/ledger.test.ts",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts tests/public-language.test.ts tests/oss-release.test.ts tests/audit.test.ts",
+        "bun run matematica doctor --release --json",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "zero-false-solved-evals",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/lean.ts",
+          "sha256": "7b4e821fae361680344028fa2331c3c36cce16c9b973a1becfef85cb27c731f1"
+        },
+        {
+          "path": "src/evidence.ts",
+          "sha256": "4a7a78b19b86a0fb8f5d743f1fa83ffeb8716b548a3bf7e7fcb4f474d20482b4"
+        },
+        {
+          "path": "src/runner.ts",
+          "sha256": "80b85818745cd9e7a0f01502468227dea485d53bc2c0af85bfec4cefa5c8bc55"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/evidence.test.ts",
+          "sha256": "2886920d341da5127766504bb8339ec4f2295bebe1e2148153de530c3e13309d"
+        },
+        {
+          "path": "tests/lean.test.ts",
+          "sha256": "91f2f06ddffa2995df927abdce7ce3487753068a8bd8ae880f06ba125931ac85"
+        },
+        {
+          "path": "tests/verifier-conformance.test.ts",
+          "sha256": "6793bffcafa5a591e3a2f484a91e4eead9786230e65948cf681c1c8852ac5211"
+        },
+        {
+          "path": "tests/runner.test.ts",
+          "sha256": "3a7f52752acbfc8b1d79dbf905040fd7225780eaea738c693a239f41f1b13ed1"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/proof-certificate.test.ts",
+          "sha256": "1f66d6878e6d8d89b4fbdc9fc9a9392a636f2fc735f8beb0d465ffb06aa4ac71"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        }
+      ]
+    },
+    {
+      "taskId": "a8c85969",
+      "evidenceId": "todos-comment:a8c85969:remote-dispatch-dead-letter-outbox",
+      "verifiedAt": "2026-05-26T14:45:00+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ledger.test.ts tests/release-doctor.test.ts tests/replay-persistence.test.ts tests/audit.test.ts tests/cli.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "unreconciled-external-outcomes",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/external-reconciliation.ts",
+          "sha256": "39350a9bf56398cbb16b974887a6d8829153db138b8057efadb946f05c8b0eb8"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/offline-replay-gate.ts",
+          "sha256": "eba1b9df087a542a0b2877fa2652d6a14483ba7e689e417b8bc08a757af46de9"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/finalization.ts",
+          "sha256": "50fef265cab95b874d62d8916444ac0d37fa409694766db927a75649a5a4b2b9"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/resume.ts",
+          "sha256": "a1bfffab1bb763ccecbe20e8764897521dbca8bff80f54d3729cbc66897206c1"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        }
+      ]
+    },
+    {
+      "taskId": "21e3177e",
+      "evidenceId": "todos-comment:21e3177e:provider-model-catalog-compatibility",
+      "verifiedAt": "2026-05-26T17:53:30+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/providers.test.ts tests/cli.test.ts --timeout 120000",
+        "bun test tests/providers.test.ts tests/cli.test.ts tests/release-doctor.test.ts tests/freshness.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "ai-sdk-compatibility",
+        "provider-legal-privacy",
+        "provider-model-pricing"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/config.ts",
+          "sha256": "47940cdbdc67ba864d38ffffe27c9c5baa21f275b40dd7085ddbfa102cb3a01b"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/remote-admission.ts",
+          "sha256": "883c4d8ed66973806f4fbce45aeffb3426b986c6bce837cabab0291f5cac134a"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/benchmarks.ts",
+          "sha256": "ae099e020cc9444fcfd467300323652f5bf391fb4a844980ae7f90199929f2b3"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/freshness.test.ts",
+          "sha256": "7a61acbe761660a289c71fe2486e830908e488a8c135618e51884e217d41c02f"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        }
+      ]
+    },
+    {
+      "taskId": "2e00f370",
+      "evidenceId": "todos-comment:2e00f370:provider-route-smoke-matrix",
+      "verifiedAt": "2026-05-26T19:28:12+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/provider-route-smoke.test.ts --timeout 120000",
+        "bun test tests/provider-route-smoke.test.ts tests/release-doctor.test.ts --timeout 120000",
+        "bun test tests/provider-route-smoke.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "ai-sdk-compatibility",
+        "ai-sdk-provider-boundary-static-audit",
+        "provider-model-pricing",
+        "provider-legal-privacy",
+        "provider-route-smoke-matrix",
+        "hostile-live-provider-dry-run"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/provider-route-smoke.ts",
+          "sha256": "98f43341f8e44d738083fa2e0a3a9def29510d53ed8e6a33195b16e60b1172bf"
+        },
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/milestones.ts",
+          "sha256": "0eb0f685857e3bd6fe21384ef1402ebafa7029f5dd24fa88de976c8575c29d4d"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "tests/provider-route-smoke.test.ts",
+          "sha256": "4c194cd2aef100691e9b1e61d25e2cefc8dd2dc2507494970f85c403a3d9c1ac"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "0d26e615",
+      "evidenceId": "todos-comment:0d26e615:milestone-release-gates-before-swarm-scale",
+      "verifiedAt": "2026-05-26T20:03:12+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/release-doctor.test.ts tests/milestones.test.ts tests/release-todos.test.ts --timeout 120000",
+        "systemd-run --user --scope -p MemoryHigh=12G -p MemoryMax=16G -p MemorySwapMax=0 -p TasksMax=4096 bun test --timeout 120000",
+        "bun run src/bin/matematica.ts doctor --release --clean-home"
+      ],
+      "requiredCheckIds": [
+        "milestone-gates"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/release-doctor.ts",
+          "sha256": "108129bf5418b88e979d5955c276bd24e2d6d13ed1edbd6811ac489d62b0b7ae"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "src/milestones.ts",
+          "sha256": "0eb0f685857e3bd6fe21384ef1402ebafa7029f5dd24fa88de976c8575c29d4d"
+        },
+        {
+          "path": "src/release-workflow.ts",
+          "sha256": "d3e3e2a08b0fdbcef456fe7b189f65674bf59731855186ece40f585a80fc7945"
+        },
+        {
+          "path": "docs/release/implementation-plan-registry.json",
+          "sha256": "63df76a039bbbf53f3366e6c59d6eb745b099e74638d13a5ce54cd486f0d096b"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/release-workflow.test.ts",
+          "sha256": "c3e621b38f1d18f6684324cc2a0018a6978a22f63b8d7f21e722b6b50ae851ca"
+        }
+      ]
+    },
+    {
+      "taskId": "18bf46d9",
+      "evidenceId": "todos-comment:18bf46d9:immutable-run-snapshot-report-provenance",
+      "verifiedAt": "2026-05-26T19:49:02+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/audit.test.ts tests/replay-persistence.test.ts tests/cli.test.ts --timeout 120000",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "saved-everything-release-coverage",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        }
+      ]
+    },
+    {
+      "taskId": "9c518524",
+      "evidenceId": "todos-comment:9c518524:ledger-maintenance-integrity-compaction",
+      "verifiedAt": "2026-05-26T18:30:24+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/ledger.test.ts tests/audit.test.ts --timeout 120000",
+        "bun test tests/cli.test.ts --timeout 120000",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "saved-everything-release-coverage",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/cli.ts",
+          "sha256": "8a343f2069050321f7402fed11a8a2794baf70176f472d8ea80f9981f4ba4cfe"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/ledger.test.ts",
+          "sha256": "a11b3b5c6d7530cc76f33906e5162fab856429f895204d0cdc92ecf3d5368c5c"
+        },
+        {
+          "path": "tests/audit.test.ts",
+          "sha256": "d357497b11107626d4dec62f5699b94d4f77b331d639d3a04b7ff5014a05f736"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "docs/operator-runbook.md",
+          "sha256": "03564d5245e32520cc4068ddc46e0b5d53df23f4fbf82f57591975c1d1b8a6c4"
+        },
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        }
+      ]
+    },
+    {
+      "taskId": "a976b9a0",
+      "evidenceId": "todos-comment:a976b9a0:model-catalog-freshness-gate",
+      "verifiedAt": "2026-05-26T18:41:24+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/providers.test.ts --timeout 120000",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "external-freshness-snapshots",
+        "provider-model-pricing"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/provider-capabilities.ts",
+          "sha256": "e8a6d804ab5c34bfbcd5222d0bf7c3aa363735d8a1c3e5f1c0b514bfec4cf02b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        }
+      ]
+    },
+    {
+      "taskId": "29e25612",
+      "evidenceId": "todos-comment:29e25612:active-run-pricing-drift-settlement",
+      "verifiedAt": "2026-05-26T18:52:24+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/providers.test.ts --timeout 120000",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "provider-model-pricing",
+        "unreconciled-external-outcomes"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/ai/instrumented.ts",
+          "sha256": "97fb3622905433dc958e1d423d7ebf80c8152130c12c31c2938d98342c94d0f7"
+        },
+        {
+          "path": "src/provider-pricing.ts",
+          "sha256": "522e9fb63b42190007bf934450b7fe5ebc21e8b16a0ccbdc30692c8f8d670831"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/providers.test.ts",
+          "sha256": "5f40dc342b6e2737d5067592d1a7f50950be712714a72671a0aec96d642bba32"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        }
+      ]
+    },
+    {
+      "taskId": "5bc128e2",
+      "evidenceId": "todos-comment:5bc128e2:content-addressed-artifact-storage",
+      "verifiedAt": "2026-05-26T19:11:11+03:00",
+      "verificationCommands": [
+        "bunx tsc --noEmit",
+        "bun test tests/artifacts.test.ts --timeout 120000",
+        "bun test tests/cli.test.ts tests/replay-persistence.test.ts --timeout 120000",
+        "bun test tests/release-todos.test.ts tests/release-doctor.test.ts tests/milestones.test.ts --timeout 120000",
+        "bun test --timeout 120000"
+      ],
+      "requiredCheckIds": [
+        "saved-everything-release-coverage",
+        "workflow-phase-release-audit"
+      ],
+      "sourceHashes": [
+        {
+          "path": "src/artifacts.ts",
+          "sha256": "7939891e8f83afaf782abce34dd7ebf86c8b53a7dc11337d139d32d4a86e754a"
+        },
+        {
+          "path": "src/domain.ts",
+          "sha256": "49681080c2168a3136e04509f76818d4c99002431c332971cf2408a45b7f94a3"
+        },
+        {
+          "path": "src/ledger.ts",
+          "sha256": "3c54014408aa19a8cf07e39ce10b899cf199d6aa5b6990704614ac8533c2da85"
+        },
+        {
+          "path": "src/audit.ts",
+          "sha256": "b5d5c98ae1ca2abe16367db95aa1bc23b3add41c932537683e2e65eb37a2bd9f"
+        },
+        {
+          "path": "src/replay.ts",
+          "sha256": "7f11c525b610c0d244533c1516abf7da76592c9a64c4eb3cab70fc8eeb77e26b"
+        },
+        {
+          "path": "src/report.ts",
+          "sha256": "5f32a684faf97cfd48dba8166da9d8567030475828f3cb4d65eb6029aa1fbd8b"
+        },
+        {
+          "path": "src/release-plan.ts",
+          "sha256": "620c8ae6fada39977f3341e6dccd9511e162637cc9b873144741134db0ea6167"
+        },
+        {
+          "path": "tests/artifacts.test.ts",
+          "sha256": "8b0117b3ac285fe3bcb329a10a68cdbc952bde64515d48a8e4f845da14da00c2"
+        },
+        {
+          "path": "tests/cli.test.ts",
+          "sha256": "9a33eb4343582d10ece52f3bd30dd3269e061dc0300fae372896793679ce3283"
+        },
+        {
+          "path": "tests/replay-persistence.test.ts",
+          "sha256": "e79697ce88257123f59d101f5f2ce7d830ed693a8ad42d98ea8efa5c98a11a4f"
+        },
+        {
+          "path": "tests/milestones.test.ts",
+          "sha256": "9059969989238f80efa575e7f0f2d84d29ce3faf69053875ff68cab184f0824c"
+        },
+        {
+          "path": "tests/release-doctor.test.ts",
+          "sha256": "b1a8f56c23a0716df1b9b4c4bcb889cc9431a16ccd1d21bfda949ab8d6eb18fd"
+        },
+        {
+          "path": "tests/release-todos.test.ts",
+          "sha256": "597c0af46be8efd017386dd3589b677690e0cd6327a9500ffc042e666733a293"
+        },
+        {
+          "path": "README.md",
+          "sha256": "26ff10b068dbf21c9b5bca89122a09c8c0b690322c4104133c967f74ff924395"
+        },
+        {
+          "path": "docs/operator-runbook.md",
+          "sha256": "03564d5245e32520cc4068ddc46e0b5d53df23f4fbf82f57591975c1d1b8a6c4"
+        }
+      ]
+    }
+  ],
+  "supersessionEvidence": [
+    {
+      "taskId": "3be841bf",
+      "replacementTaskIds": [
+        "b9a12f12",
+        "a2fb51b7"
+      ],
+      "supersededReason": "Adversarial review found duplicate benchmark/eval suite tasks; keep task for history and do not delete.",
+      "commentEvidence": "canonical-plan:supersededReason plus todos plan 62077a6e backlog retained task 3be841bf as superseded"
+    },
+    {
+      "taskId": "bbdd53b9",
+      "replacementTaskIds": [
+        "d986cab3"
+      ],
+      "supersededReason": "Adversarial review promoted this medium hygiene work into a release-critical blocker.",
+      "commentEvidence": "canonical-plan:supersededReason plus completed blocker d986cab3 evidence record"
+    }
+  ]
+}

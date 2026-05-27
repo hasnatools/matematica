@@ -1,0 +1,17 @@
+Matematica
+Copyright (c) 2026 Hasna
+
+Matematica is distributed as free open-source software under the MIT License.
+
+The package does not include hosted compute, bundled model credits, API keys,
+provider accounts, private Hasna infrastructure, or telemetry endpoints.
+Remote model use is bring-your-own-key and is disabled unless the operator
+explicitly configures a provider and cost cap.
+
+The npm package name for the public release is @hasna/matematica.
+The CLI command is matematica.
+The public source repository is https://github.com/hasna/matematica.
+
+Third-party dependencies are resolved by the operator's package manager from
+their own licenses. See package.json and the lockfile for dependency names and
+versions.

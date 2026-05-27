@@ -1,0 +1,308 @@
+{
+  "format": "matematica.adversarial-plan-change-review-manifest",
+  "version": 1,
+  "planId": "62077a6e-5b78-4849-b43a-f3b6bf5a67bd",
+  "records": [
+    {
+      "mutationId": "2026-05-25-two-adversarial-reviewers",
+      "material": true,
+      "changedTaskIds": [
+        "a219e0dc",
+        "21a0604c",
+        "d986cab3",
+        "a3b795e3",
+        "451a787f",
+        "04362083",
+        "fc3b3129"
+      ],
+      "rationale": "Two adversarial plan-review tracks produced release-critical changes for canonical plan registration, public claim audit, research compliance, shared registry publication, saved-everything release coverage, freshness evidence, and AI SDK boundary auditing.",
+      "taskEvidence": [
+        {
+          "taskId": "8cc95c80",
+          "evidenceType": "todo-comment",
+          "evidenceRef": "2026-05-25T22:11:02.863Z"
+        },
+        {
+          "taskId": "a219e0dc",
+          "evidenceType": "todo-task",
+          "evidenceRef": "canonical-plan-gate-added"
+        },
+        {
+          "taskId": "451a787f",
+          "evidenceType": "release-plan-registry",
+          "evidenceRef": "saved-everything-release-coverage"
+        }
+      ],
+      "review": {
+        "scope": "plan_change",
+        "status": "degraded_capacity",
+        "reviewHash": "71717732c269ee39aa4aec54a5f4eeef82a5c05fb087ea74ca6ef3e697a42db5",
+        "artifactIds": [
+          "tmp-matematica-adversary-architecture-md",
+          "tmp-matematica-adversary-release-md",
+          "plan-review-capacity-failure-2026-05-25-local-codex-lineage"
+        ],
+        "critics": [
+          {
+            "criticId": "architecture-budget-persistence-reviewer",
+            "independentGroup": "architecture-budget-persistence",
+            "providerLineage": {
+              "provider": "local-codex",
+              "requestedModelId": "codex-plan-review-architecture",
+              "actualModelId": "codex-plan-review-architecture",
+              "modelFamily": "codex-architecture-review",
+              "routingPath": [
+                "cli",
+                "local-read-only-review"
+              ],
+              "systemPromptLineageHash": "e1c8d9a9b3418a31d011e2bb2c7aaf43bde4fbdebf3089f0d357b6c705b94902"
+            },
+            "findings": [
+              {
+                "id": "plan-review-architecture-budget-persistence-1",
+                "severity": "high",
+                "finding": "The plan needed a canonical release registry and release doctor enforcement so stale or duplicate backlog items could not be mistaken for the release path.",
+                "status": "accepted",
+                "rationale": "Accepted and implemented through canonical release plan, shared registry, freshness, and saved-everything gates.",
+                "artifactIds": [
+                  "tmp-matematica-adversary-architecture-md"
+                ]
+              }
+            ]
+          },
+          {
+            "criticId": "verification-provider-oss-reviewer",
+            "independentGroup": "verification-provider-oss-release",
+            "providerLineage": {
+              "provider": "local-codex",
+              "requestedModelId": "codex-plan-review-release",
+              "actualModelId": "codex-plan-review-release",
+              "modelFamily": "codex-release-review",
+              "routingPath": [
+                "cli",
+                "local-read-only-review"
+              ],
+              "systemPromptLineageHash": "761a2b4a98cf8ce09d79a5f8975a42c115ebf5fc2c02edaa6d594b241c5903a6"
+            },
+            "findings": [
+              {
+                "id": "plan-review-verification-provider-oss-1",
+                "severity": "high",
+                "finding": "The plan needed public claim, research compliance, provider-boundary, and release evidence gates before OSS/BYOK claims could be promoted.",
+                "status": "accepted",
+                "rationale": "Accepted and implemented through public claims, research legal/privacy, AI SDK provider-boundary, and release-evidence freshness gates.",
+                "artifactIds": [
+                  "tmp-matematica-adversary-release-md"
+                ]
+              }
+            ]
+          }
+        ],
+        "capacityFailure": {
+          "reason": "archived reviewers produced useful objections, but both used the same local Codex provider and execution root so they cannot satisfy independent plan-review quorum",
+          "requestedCritics": 2,
+          "availableCritics": 0,
+          "artifactId": "plan-review-capacity-failure-2026-05-25-local-codex-lineage"
+        },
+        "riskAcceptance": {
+          "releaseOwner": "cato",
+          "acceptedAt": "2026-05-26T12:30:00.000Z",
+          "expiresAt": "2026-06-30T23:59:59.000Z",
+          "changedTaskIds": [
+            "a219e0dc",
+            "21a0604c",
+            "d986cab3",
+            "a3b795e3",
+            "451a787f",
+            "04362083",
+            "fc3b3129"
+          ],
+          "reviewerDeficit": {
+            "requestedCritics": 2,
+            "availableCritics": 0,
+            "missingCritics": 2,
+            "reason": "archived reviewers produced useful objections, but both used the same local Codex provider and execution root so they cannot satisfy independent plan-review quorum"
+          },
+          "rollbackPlan": "Revert or supersede material plan mutation 2026-05-25-two-adversarial-reviewers, remove the affected changedTaskIds from release readiness, and rerun release doctor before any public release if independent adversarial quorum cannot be obtained before expiry.",
+          "artifactId": "plan-review-capacity-failure-2026-05-25-local-codex-lineage-owner-acceptance-cato-2026-05-26"
+        }
+      }
+    },
+    {
+      "mutationId": "2026-05-26-thread-limit-capacity-failure",
+      "material": true,
+      "changedTaskIds": [
+        "df722e57"
+      ],
+      "rationale": "A repeat request to spawn adversarial subagents hit the platform thread limit; the capacity failure was recorded and converted into a backlog entropy audit task rather than silently treating missing reviewers as approval.",
+      "taskEvidence": [
+        {
+          "taskId": "8cc95c80",
+          "evidenceType": "todo-comment",
+          "evidenceRef": "2026-05-26T01:30:09.990Z"
+        },
+        {
+          "taskId": "df722e57",
+          "evidenceType": "todo-task",
+          "evidenceRef": "second-pass-backlog-entropy-audit"
+        }
+      ],
+      "review": {
+        "scope": "plan_change",
+        "status": "degraded_capacity",
+        "reviewHash": "4e44de06b04bfcc81f0e38f188a69f0af9a1de9c24418a7c8031bb48f5eb25a8",
+        "artifactIds": [
+          "plan-review-capacity-failure-2026-05-26"
+        ],
+        "critics": [],
+        "capacityFailure": {
+          "reason": "multi_agent spawn failed with thread-limit reached",
+          "requestedCritics": 2,
+          "availableCritics": 0,
+          "artifactId": "plan-review-capacity-failure-2026-05-26"
+        },
+        "riskAcceptance": {
+          "releaseOwner": "cato",
+          "acceptedAt": "2026-05-26T12:30:00.000Z",
+          "expiresAt": "2026-06-30T23:59:59.000Z",
+          "changedTaskIds": [
+            "df722e57"
+          ],
+          "reviewerDeficit": {
+            "requestedCritics": 2,
+            "availableCritics": 0,
+            "missingCritics": 2,
+            "reason": "multi_agent spawn failed with thread-limit reached"
+          },
+          "rollbackPlan": "Revert or supersede material plan mutation 2026-05-26-thread-limit-capacity-failure, remove the affected changedTaskIds from release readiness, and rerun release doctor before any public release if independent adversarial quorum cannot be obtained before expiry.",
+          "artifactId": "plan-review-capacity-failure-2026-05-26-owner-acceptance-cato-2026-05-26"
+        }
+      }
+    },
+    {
+      "mutationId": "2026-05-26-peirce-carson-adversarial-review",
+      "material": true,
+      "changedTaskIds": [
+        "8cc95c80"
+      ],
+      "rationale": "The user requested two adversarial subagents to improve the Matematica CLI plan; their objections were persisted and converted into release-plan hardening work while recording that same local Codex lineage cannot count as independent quorum.",
+      "taskEvidence": [
+        {
+          "taskId": "8cc95c80",
+          "evidenceType": "todo-comment",
+          "evidenceRef": "subagent-notifications:019e62ec-16ed-7532-b566-de1e67843e30,019e62ec-3acd-7662-b1ab-d782560a4673"
+        }
+      ],
+      "review": {
+        "scope": "plan_change",
+        "status": "degraded_capacity",
+        "reviewHash": "9561f2666db809a2f308d37fe7b3b8e79b4f94f04812b5c6bfaff87fe90b9de7",
+        "artifactIds": [
+          "subagent:019e62ec-16ed-7532-b566-de1e67843e30:peirce",
+          "subagent:019e62ec-3acd-7662-b1ab-d782560a4673:carson",
+          "plan-review-capacity-failure-2026-05-26-same-local-codex-root"
+        ],
+        "critics": [
+          {
+            "criticId": "peirce-architecture-adversary",
+            "independentGroup": "architecture-replay-budget",
+            "providerLineage": {
+              "provider": "local-codex",
+              "upstreamProvider": "local-codex",
+              "requestedModelId": "inherited-parent-model",
+              "actualModelId": "inherited-parent-model",
+              "modelFamily": "codex",
+              "routingPath": [
+                "multi_agent_v1",
+                "local-codex"
+              ],
+              "systemPromptLineageHash": "8bd87476b7e23d4e6b87433db2f186c84147edbb9de6fa219d331f7c21a9bc74"
+            },
+            "findings": [
+              {
+                "id": "peirce-plan-review-independence-1",
+                "severity": "high",
+                "finding": "Plan-review independence must reject same provider, upstream, model family, prompt lineage, or execution root even when reviewer labels differ.",
+                "status": "accepted",
+                "rationale": "Accepted by hardening the plan-change review validator and adding same-provider regression coverage.",
+                "artifactIds": [
+                  "subagent:019e62ec-16ed-7532-b566-de1e67843e30:peirce"
+                ]
+              },
+              {
+                "id": "peirce-plan-review-replay-1",
+                "severity": "high",
+                "finding": "Material plan changes need replayable hashes and stricter evidence binding rather than bare task and artifact ids.",
+                "status": "accepted",
+                "rationale": "Accepted by adding review hash validation and backlog tasks for before/after plan hashes, task snapshots, and artifact hash binding.",
+                "artifactIds": [
+                  "subagent:019e62ec-16ed-7532-b566-de1e67843e30:peirce"
+                ]
+              }
+            ]
+          },
+          {
+            "criticId": "carson-release-adversary",
+            "independentGroup": "release-product-verification",
+            "providerLineage": {
+              "provider": "local-codex",
+              "upstreamProvider": "local-codex",
+              "requestedModelId": "inherited-parent-model",
+              "actualModelId": "inherited-parent-model",
+              "modelFamily": "codex",
+              "routingPath": [
+                "multi_agent_v1",
+                "local-codex"
+              ],
+              "systemPromptLineageHash": "3e8e34f2d21d22b83f83a8ce855d7bd65f61480273e44f1f7a4f4d03010c1aba"
+            },
+            "findings": [
+              {
+                "id": "carson-goal-ledger-budget-1",
+                "severity": "high",
+                "finding": "The CLI needs explicit goal contracts, append-only ledger completeness, budget caps, provider mocks, resume, export, and OSS free-mode release gates.",
+                "status": "accepted",
+                "rationale": "Accepted as concrete implementation tasks and release-gate requirements for the Bun TypeScript CLI plan.",
+                "artifactIds": [
+                  "subagent:019e62ec-3acd-7662-b1ab-d782560a4673:carson"
+                ]
+              },
+              {
+                "id": "carson-unsafe-claim-ux-1",
+                "severity": "high",
+                "finding": "Public copy and CLI UX must avoid unsupported math-success claims and expose budget state, phase state, agent count, cost, ledger path, resume command, and failure reason.",
+                "status": "accepted",
+                "rationale": "Accepted as no-unsafe-claims, lifecycle command, and operator-status requirements.",
+                "artifactIds": [
+                  "subagent:019e62ec-3acd-7662-b1ab-d782560a4673:carson"
+                ]
+              }
+            ]
+          }
+        ],
+        "capacityFailure": {
+          "reason": "two spawned reviewers returned objections, but both share local Codex provider, upstream, model family, and execution root; independent reviewer capacity was unavailable in this environment",
+          "requestedCritics": 2,
+          "availableCritics": 0,
+          "artifactId": "plan-review-capacity-failure-2026-05-26-same-local-codex-root"
+        },
+        "riskAcceptance": {
+          "releaseOwner": "cato",
+          "acceptedAt": "2026-05-26T12:30:00.000Z",
+          "expiresAt": "2026-06-30T23:59:59.000Z",
+          "changedTaskIds": [
+            "8cc95c80"
+          ],
+          "reviewerDeficit": {
+            "requestedCritics": 2,
+            "availableCritics": 0,
+            "missingCritics": 2,
+            "reason": "two spawned reviewers returned objections, but both share local Codex provider, upstream, model family, and execution root; independent reviewer capacity was unavailable in this environment"
+          },
+          "rollbackPlan": "Revert or supersede material plan mutation 2026-05-26-peirce-carson-adversarial-review, remove the affected changedTaskIds from release readiness, and rerun release doctor before any public release if independent adversarial quorum cannot be obtained before expiry.",
+          "artifactId": "plan-review-capacity-failure-2026-05-26-same-local-codex-root-owner-acceptance-cato-2026-05-26"
+        }
+      }
+    }
+  ]
+}
