@@ -28,7 +28,7 @@ test("public package metadata locks the free OSS release boundary", () => {
     bin: { matematica: "./src/bin/matematica.ts" },
     repository: {
       type: "git",
-      url: "https://github.com/hasna/matematica.git"
+      url: "https://github.com/hasnatools/matematica.git"
     }
   });
   expect(packageJson.private).toBeUndefined();

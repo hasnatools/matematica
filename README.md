@@ -133,7 +133,7 @@ and operator VACUUM guidance as run evidence.
 ## Free Open-Source Release Boundary
 
 The public package name is `@hasna/matematica`, the CLI command is
-`matematica`, and the public repository is `hasna/matematica`. The package is
+`matematica`, and the public repository is `hasnatools/matematica`. The package is
 MIT licensed and ships `LICENSE` and `NOTICE` files.
 
 The npm package is self-contained source for the Bun CLI. It does not depend on

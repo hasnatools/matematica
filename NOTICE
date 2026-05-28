@@ -10,7 +10,7 @@ explicitly configures a provider and cost cap.
 
 The npm package name for the public release is @hasna/matematica.
 The CLI command is matematica.
-The public source repository is https://github.com/hasna/matematica.
+The public source repository is https://github.com/hasnatools/matematica.
 
 Third-party dependencies are resolved by the operator's package manager from
 their own licenses. See package.json and the lockfile for dependency names and

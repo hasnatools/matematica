@@ -23,11 +23,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/hasna/matematica.git"
+    "url": "https://github.com/hasnatools/matematica.git"
   },
-  "homepage": "https://github.com/hasna/matematica#readme",
+  "homepage": "https://github.com/hasnatools/matematica#readme",
   "bugs": {
-    "url": "https://github.com/hasna/matematica/issues"
+    "url": "https://github.com/hasnatools/matematica/issues"
   },
   "publishConfig": {
     "access": "public"

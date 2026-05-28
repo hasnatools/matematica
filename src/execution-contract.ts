@@ -19,7 +19,7 @@ export type ExecutionContract = {
     npmName: "@hasna/matematica";
     cli: "matematica";
     license: "MIT";
-    repository: "hasna/matematica";
+    repository: "hasnatools/matematica";
   };
   invariants: string[];
   modes: ExecutionModeContract[];
@@ -32,7 +32,7 @@ export const EXECUTION_CONTRACT: ExecutionContract = {
     npmName: "@hasna/matematica",
     cli: "matematica",
     license: "MIT",
-    repository: "hasna/matematica"
+    repository: "hasnatools/matematica"
   },
   invariants: [
     "The public CLI is free open-source software and ships no hosted compute, provider account, bundled model credits, or API keys.",

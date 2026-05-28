@@ -23,7 +23,7 @@ export type CanonicalReleasePlan = {
   planId: string;
   shortPlanId: string;
   packageName: "@hasna/matematica";
-  repository: "hasna/matematica";
+  repository: "hasnatools/matematica";
   objective: string;
   taskSource: {
     system: "todos";
@@ -75,7 +75,7 @@ export const CANONICAL_RELEASE_PLAN: CanonicalReleasePlan = {
   planId: CANONICAL_MATEMATICA_PLAN_ID,
   shortPlanId: CANONICAL_MATEMATICA_PLAN_SHORT_ID,
   packageName: "@hasna/matematica",
-  repository: "hasna/matematica",
+  repository: "hasnatools/matematica",
   objective: "Fully build the Bun/TypeScript Matematica CLI for persistent, budget-governed mathematical goal runs with PFLK/GREE, saved-everything replay, BYOK providers, research provenance, verifier-backed finalization, and public OSS release gates.",
   taskSource: {
     system: "todos",

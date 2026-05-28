@@ -16,7 +16,7 @@ export type SharedImplementationPlanRegistryEntry = {
   canonicalPlanId: string;
   canonicalShortPlanId: string;
   packageName: "@hasna/matematica";
-  repository: "hasna/matematica";
+  repository: "hasnatools/matematica";
   taskIds: string[];
 };
 
